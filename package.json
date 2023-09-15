@@ -1,0 +1,16 @@
+{
+  "name": "custom_metrics_mco",
+  "version": "1.0.0",
+  "description": "MCO Demo Actia",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm run build && npm run docker && npm run up",
+    "build": "./gradlew clean && ./gradlew build",
+    "docker": "docker build -t app:latest .",
+    "up": "docker-compose up -d",
+    "down": "docker-compose down -v",
+    "ps": "docker-compose ps"
+  },
+  "author": "hamdi bensalah",
+  "license": "ISC"
+}
